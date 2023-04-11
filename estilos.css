@@ -1,0 +1,81 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+    width: 200px;
+    margin: 0;
+    padding: 4px;
+}
+
+ul li {
+    color: white;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 2px solid rgb(112, 2, 167);
+    border-left: 2px solid rgb(112, 2, 167);
+    border-right: 2px solid rgb(112, 2, 167);
+    background-color: blueviolet;
+    transition: all 0.2s;
+}
+
+/* El símbolo "dos puntos" nos sirve para especificar comportamientos.
+En el caso de first-child o last-child, darán estilos solo a elementos
+hijos como: primer ítem de una lista, última columna o fila, etc.. */
+ul li:first-child {
+    border-top: 2px solid rgb(112, 2, 167);
+}
+
+/* Este estilo solo se activará cuando pasemos con el mouse
+por encima del elemento que estamos definiendo con hover */
+ul li:hover {
+    cursor: pointer;
+    background-color: rgb(165, 87, 238);
+    transform: scale(1.1);
+    border-top: 2px solid rgb(112, 2, 167);
+    box-shadow: 5px 5px 5px rgb(112, 2, 167);
+}
+
+ul.menu {
+    width: 100%;
+    float: left;
+}
+
+ul.menu li {
+    float: left;
+    border-left: 2px solid rgb(112, 2, 167);
+    border-bottom: 2px solid rgb(112, 2, 167);
+    border-top: 2px solid rgb(112, 2, 167);
+    border-right: none;
+}
+
+ul.menu li:last-child {
+    border-right: 2px solid rgb(112, 2, 167);
+}
+
+ul.menu li:hover {
+    border-right: 2px solid rgb(112, 2, 167);
+}
+
+@media (max-width: 350px) {
+    
+    ul.menu {
+        width: 200px;
+        float: none;
+    }
+    
+    ul.menu li {
+        float: none;
+    }
+
+    ul.menu li:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    ul.menu li:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
